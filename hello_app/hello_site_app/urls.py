@@ -3,6 +3,6 @@ from django.urls import path
 from hello_site_app.views import HelloWorldView, HelloView
 
 urlpatterns = [
-   path('', hello, view = HelloWorldView.as_view()),
-   path('<str:name>', view = HelloView.as_view())
+    path('', HelloWorldView.as_view(), name='hello_world'),
+    path('<name>', HelloView.as_view(), name='hello_name'),
 ]

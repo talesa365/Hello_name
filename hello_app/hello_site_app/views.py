@@ -11,7 +11,5 @@ class HelloWorldView(View):
 class HelloView(View):
     def get(self, request, name):
         return render(
-            request,
-            template_name = 'Hello_name.html', 
-            context = {'person':name},  
+             request=request, template_name='hello_name.html', context=context 
         )  
